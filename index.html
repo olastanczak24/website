@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <title>Cartography project/</title>
+    <link rel="stylesheet" href="./cartography.css">
 </head>
-<body>
-
-<h1>Journey as a flow</h1>
-<p>Art & Cartography project.</p>
-
-  <iframe width="2000" height="1315" autoplay loop src="https://iwriteaboutarteverywhereintheworld.files.wordpress.com/2023/10/386933145_7084301831588396_2888805054151503867_n-1.mp4" frameborder="0" allowfullscreen></iframe>
-      </iframe>
-
+<body style="width:100vw; height: 100vh; background-color: black; overflow: hidden" >
+<main>
+    <div id="main-wrapper">
+        <div id="content" style="z-index:1; background:transparent;">
+            <h1 style="color:white">Journey as a flow</h1>
+            <p style="color:white">Art & Cartography project.</p></div>
+        <div id="background">
+            <video autoplay muted loop style="position: absolute; z-index:-100; width: 100vw; height: 100vh; top:0; left:0; object-fit: fill;">
+                <source src="https://iwriteaboutarteverywhereintheworld.files.wordpress.com/2023/10/386933145_7084301831588396_2888805054151503867_n-1.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</main>
 </body>
 </html>
