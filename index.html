@@ -2,22 +2,137 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cartography project/</title>
+    <title>Journey as a flow - Art & Cartography project</title>
+    <!-- Add Google Font link for the title and footer -->
+    <link href="https://fonts.googleapis.com/css2?family=Futura&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./cartography.css">
+    <style>
+        /* Apply Futura font to the entire page */
+        body {
+            font-family: 'Futura', sans-serif; /* Futura font for all text */
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Main wrapper and text container */
+        #footer-text {
+            position: absolute;
+            bottom: 20px; /* Initial position at the bottom */
+            left: 50%; /* Center the footer text horizontally */
+            transform: translateX(-50%); /* Adjust for proper centering */
+            z-index: 2; /* Ensures it's above the video */
+            text-align: center; /* Center text */
+            white-space: nowrap; /* Prevent the lines from breaking */
+            animation: moveText 30s linear infinite; /* Faster animation for quicker movement */
+        }
+
+        /* Style for individual text lines */
+        .flow-line {
+            display: block;
+            font-family: 'Futura', sans-serif; /* Futura font for footer */
+            color: white;
+            font-size: 20px; /* Slightly larger for better readability */
+            background: rgba(0, 0, 0, 0.5); /* Optional: Adds slight background for readability */
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 10px;
+            position: relative;
+            letter-spacing: 1px; /* Slightly increased letter-spacing for a more elegant effect */
+        }
+
+        /* Animation for moving the text from bottom to top */
+        @keyframes moveText {
+            0% {
+                bottom: -50px; /* Start just below the visible screen */
+            }
+            25% {
+                bottom: 100px; /* Text reaches its first line position */
+            }
+            50% {
+                bottom: 250px; /* Text reaches its second line position */
+            }
+            75% {
+                bottom: 400px; /* Text reaches its third line position */
+            }
+            100% {
+                bottom: 1000px; /* Move the text off the screen after the last line */
+            }
+        }
+
+        /* Title position moved to the left and font set */
+        #title {
+            font-size: 36px;
+            text-align: left; /* Align title to the left */
+            padding-left: 20px; /* Add some padding from the left edge */
+            animation: fadeInOut 5s infinite;
+        }
+
+        /* Title fade-in and fade-out effect */
+        @keyframes fadeInOut {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Ensure video is properly displayed as background */
+        #background video {
+            position: absolute;
+            z-index: -100;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    </style>
 </head>
-<body style="width:100vw; height: 100vh; background-color: black; overflow: hidden" >
+<body>
+
 <main>
     <div id="main-wrapper">
         <div id="content" style="z-index:1; background:transparent;">
-            <h1 style="font family: Futura; color:white">Journey as a flow</h1>
-            <p style="font family: Futura; color:white">Art & Cartography project.</p></div>
+            <!-- Title with fade-in and fade-out animation -->
+            <h1 id="title" style="color:white;">Journey as a flow</h1>
+            <p style="color:white;">Aleksandra Stanczak</p> <!-- Updated to your name -->
+        </div>
+
         <div id="background">
-          <video autoplay muted loop style="position: absolute; z-index:-100; width: 100vw; height: 100vh; top:0; left:0; object-fit: fill;">
+            <video autoplay muted loop>
+                <!-- Corrected video path -->
                 <source src="./media/video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
+
+        <!-- New text at the bottom-right corner -->
+        <div id="footer-text">
+            <!-- 15 lines of footer text with short sentences -->
+            <span class="flow-line">Viaggiare può essere difficile.</span>
+            <span class="flow-line">Significa abbandonare la zona di comfort.</span>
+            <span class="flow-line">Ma è anche un'opportunità unica.</span>
+            <span class="flow-line">Ogni viaggio porta una nuova prospettiva.</span>
+            <span class="flow-line">Ti spinge a esplorare luoghi sconosciuti.</span>
+            <span class="flow-line">E a incontrare persone straordinarie.</span>
+            <span class="flow-line">Ogni passo è una nuova lezione di vita.</span>
+            <span class="flow-line">Può essere inquietante, ma è liberatorio.</span>
+            <span class="flow-line">Il viaggio è un cammino verso la crescita.</span>
+            <span class="flow-line">Ogni cultura che incontri ti arricchisce.</span>
+            <span class="flow-line">Non è sempre facile adattarsi, ma vale la pena.</span>
+            <span class="flow-line">Ogni luogo ha qualcosa da insegnarti.</span>
+            <span class="flow-line">Il viaggio ti apre la mente e il cuore.</span>
+            <span class="flow-line">Impari a vedere il mondo con occhi nuovi.</span>
+            <span class="flow-line">E a comprendere meglio te stesso.</span>
+        </div>
     </div>
 </main>
+
 </body>
 </html>
