@@ -6,3 +6,5 @@ It serves as a central hub for my online presence, providing visitors with infor
 
 CSS
 HTML
+
+To see my website online go to: https://www.aleksandrasartist.com
